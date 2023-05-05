@@ -24,7 +24,7 @@ class HomePage extends StatelessWidget {
     );
   }
 
-  Widget buildKey(int note, Color colorKey) {
+  Widget buildKey({ required int note, required Color colorKey }) {
     return Expanded(
       child: Container(
         color: colorKey,
@@ -49,13 +49,13 @@ class HomePage extends StatelessWidget {
       body: Column(
         crossAxisAlignment: CrossAxisAlignment.stretch,
         children: [
-          buildKey(1, Colors.redAccent),
-          buildKey(2, Colors.indigo),
-          buildKey(3, Colors.blue),
-          buildKey(4, Colors.green),
-          buildKey(5, Colors.orangeAccent),
-          buildKey(6, Colors.brown),
-          buildKey(7, Colors.cyan),
+          buildKey( note: 1, colorKey: Colors.redAccent),
+          buildKey( note: 2, colorKey: Colors.indigo),
+          buildKey( note: 3, colorKey: Colors.blue),
+          buildKey( note: 4, colorKey: Colors.green),
+          buildKey( note: 5, colorKey: Colors.orangeAccent),
+          buildKey( note: 6, colorKey: Colors.brown),
+          buildKey( note: 7, colorKey: Colors.cyan),
           // Expanded(
           //   child: Container(
           //     color: Colors.pinkAccent,
