@@ -31,8 +31,11 @@ class HomePage extends StatelessWidget {
             child: Container(
               color: Colors.pinkAccent,
               child: TextButton(
-                
-                onPressed: () {},
+                onPressed: () {
+                  player.play(
+                    AssetSource("audios/note1.wav"),
+                  );
+                },
                 child: Text(""),
               ),
             ),
@@ -41,8 +44,11 @@ class HomePage extends StatelessWidget {
             child: Container(
               color: Colors.indigo,
               child: TextButton(
-                
-                onPressed: () {},
+                onPressed: () {
+                  player.play(
+                    AssetSource("audios/note2.wav"),
+                  );
+                },
                 child: Text(""),
               ),
             ),
