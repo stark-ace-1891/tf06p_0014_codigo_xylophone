@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:audioplayers/audioplayers.dart';
 
-
-void main(){
+void main() {
   runApp(MyApp());
 }
 
@@ -18,6 +17,19 @@ class MyApp extends StatelessWidget {
 class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return Scaffold();
+    return Scaffold(
+      body: Center(
+        child: ElevatedButton(
+          onPressed:  (){
+              AudioPlayer player = AudioPlayer();
+              player.play(AssetSource("audios/note1.wav"));
+
+
+
+          },
+          child: Text("Child"),
+        ),
+      ),
+    );
   }
 }
