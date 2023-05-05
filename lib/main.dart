@@ -15,17 +15,14 @@ class MyApp extends StatelessWidget {
 }
 
 class HomePage extends StatelessWidget {
+  AudioPlayer player = AudioPlayer();
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       body: Center(
         child: ElevatedButton(
-          onPressed:  (){
-              AudioPlayer player = AudioPlayer();
-              player.play(AssetSource("audios/note1.wav"));
-
-
-
+          onPressed: () {
+            player.play(AssetSource("audios/note1.wav"));
           },
           child: Text("Child"),
         ),
