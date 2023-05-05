@@ -16,6 +16,28 @@ class MyApp extends StatelessWidget {
 
 class HomePage extends StatelessWidget {
   AudioPlayer player = AudioPlayer();
+
+//"audios/note1.wav"
+  playNote(note) {
+    player.play(
+      AssetSource("audios/note$note.wav"),
+    );
+  }
+
+  Widget buildKey(int note, Color colorKey) {
+    return Expanded(
+      child: Container(
+        color: colorKey,
+        child: TextButton(
+          onPressed: () {
+            playNote(note);
+          },
+          child: Text(""),
+        ),
+      ),
+    );
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -27,32 +49,33 @@ class HomePage extends StatelessWidget {
       body: Column(
         crossAxisAlignment: CrossAxisAlignment.stretch,
         children: [
-          Expanded(
-            child: Container(
-              color: Colors.pinkAccent,
-              child: TextButton(
-                onPressed: () {
-                  player.play(
-                    AssetSource("audios/note1.wav"),
-                  );
-                },
-                child: Text(""),
-              ),
-            ),
-          ),
-          Expanded(
-            child: Container(
-              color: Colors.indigo,
-              child: TextButton(
-                onPressed: () {
-                  player.play(
-                    AssetSource("audios/note2.wav"),
-                  );
-                },
-                child: Text(""),
-              ),
-            ),
-          ),
+          buildKey(1, Colors.redAccent),
+          buildKey(2, Colors.indigo),
+          buildKey(3, Colors.blue),
+          buildKey(4, Colors.green),
+          buildKey(5, Colors.orangeAccent),
+          // Expanded(
+          //   child: Container(
+          //     color: Colors.pinkAccent,
+          //     child: TextButton(
+          //       onPressed: () {
+          //         playNote(1);
+          //       },
+          //       child: Text(""),
+          //     ),
+          //   ),
+          // ),
+          // Expanded(
+          //   child: Container(
+          //     color: Colors.indigo,
+          //     child: TextButton(
+          //       onPressed: () {
+          //         playNote(2);
+          //       },
+          //       child: Text(""),
+          //     ),
+          //   ),
+          // ),
         ],
       ),
     );
