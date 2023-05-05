@@ -54,6 +54,8 @@ class HomePage extends StatelessWidget {
           buildKey(3, Colors.blue),
           buildKey(4, Colors.green),
           buildKey(5, Colors.orangeAccent),
+          buildKey(6, Colors.brown),
+          buildKey(7, Colors.cyan),
           // Expanded(
           //   child: Container(
           //     color: Colors.pinkAccent,
