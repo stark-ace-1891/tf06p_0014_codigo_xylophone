@@ -19,13 +19,34 @@ class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Center(
-        child: ElevatedButton(
-          onPressed: () {
-            player.play(AssetSource("audios/note1.wav"));
-          },
-          child: Text("Child"),
-        ),
+      appBar: AppBar(
+        backgroundColor: Colors.black,
+        title: Text("Xylophone"),
+        centerTitle: true,
+      ),
+      body: Column(
+        children: [
+          Expanded(
+            child: Container(
+              color: Colors.pinkAccent,
+              child: TextButton(
+                
+                onPressed: () {},
+                child: Text(""),
+              ),
+            ),
+          ),
+          Expanded(
+            child: Container(
+              color: Colors.indigo,
+              child: TextButton(
+                
+                onPressed: () {},
+                child: Text(""),
+              ),
+            ),
+          ),
+        ],
       ),
     );
   }
